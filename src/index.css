@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --dk-red:        #C60C30;
+  --rad-purple:    #5B2D8E;
+  --rad-teal:      #0D9488;
+  --rad-teal-lt:   #CCFBF1;
+  --rad-purple-lt: #EDE9FE;
+  --pass-green:    #10B981;
+  --pass-lt:       #D1FAE5;
+  --warn-amber:    #F59E0B;
+  --warn-lt:       #FEF3C7;
+  --fail-red:      #EF4444;
+  --fail-lt:       #FEE2E2;
+  --surface:       #F8F7FC;
+  --card:          #FFFFFF;
+  --text:          #111827;
+  --muted:         #6B7280;
+  --border:        #E5E7EB;
+}
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: var(--surface);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  min-height: 100dvh;
+  overscroll-behavior: none;
+}
+
+#root {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Score ring animation */
+.score-ring-fill {
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+/* Quote fade transition */
+.quote-fade-enter {
+  opacity: 0;
+  transform: translateY(8px);
+}
+.quote-fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 200ms ease, transform 200ms ease;
+}
+
+/* iOS safe area for tab bar */
+.tab-bar-safe {
+  padding-bottom: max(12px, env(safe-area-inset-bottom));
+}
