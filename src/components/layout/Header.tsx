@@ -18,10 +18,10 @@ export function Header() {
             backgroundClip: 'text',
           }}
         >
-          Radikale Testen
+          Radikale Citater
         </h1>
         <p className="text-[11px] text-[var(--muted)] italic mt-0.5">
-          Din politiske samvittighed siden 1905
+          Socialiberale stemmer siden 1905
         </p>
       </div>
     </header>
